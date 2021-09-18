@@ -1,11 +1,10 @@
 {
-  "name": "gatsby-personal-starter-blog",
-  "private": true,
-  "description": "A personal blog starter for a blog powered by Netlify CMS, based on the default blog starter",
-  "version": "2.0.0",
-  "author": "Thomas Wang <thomas@wang.sh>",
+  "name": "candid-and-cringe-v1",
+  "description": "First version of the Candid & Cringe podcast's website",
+  "version": "1.0.0",
+  "author": "Thuy Doan <clearlythuydoan@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/clearlyTHUYDOAN/candid-and-cringe-v1/issues"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
