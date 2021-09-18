@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: thomaswang/gatsby-personal-starter-blog
+  repo: https://github.com/clearlyTHUYDOAN/candid-and-cringe-v1
 
 media_folder: content/assets
 public_folder: ../assets
