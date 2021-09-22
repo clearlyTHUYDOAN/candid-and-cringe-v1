@@ -1,8 +1,43 @@
 import React from "react"
+import styled from "styled-components"
 
 import SEO from "../components/seo"
 import NavigationMenu from "../components/navigationMenu"
 import "../components/styles.css"
+import hero from "../images/dark-hero-large.jpg"
+
+const TopHeroSection = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+
+  background-image: url(${hero});
+  background-size: cover;
+`
+
+const ContentContainer = styled.div`
+  padding-bottom: 20px;
+
+  font-family: "Ogg-Regular";
+  font-size: 3.5em;
+  text-align: center;
+  color: white;
+`
+
+const ListenNowCTA = styled.a`
+  padding: 2px 30px;
+
+  color: white;
+  background-color: #8c4e2f;
+  box-shadow: none;
+
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 9px;
+}
+`
 
 class IndexPage extends React.Component {
   render() {
@@ -10,9 +45,16 @@ class IndexPage extends React.Component {
       <>
         <SEO title="Home" />
         <NavigationMenu aria-label="Site navigation" />
-        <header class="test">
-          A podcast breaking barriers one candid conversation at a time
-        </header>
+        <TopHeroSection>
+          <ContentContainer>
+            A podcast breaking barriers
+            <br />
+            one candid conversation
+            <br />
+            at a time
+          </ContentContainer>
+          <ListenNowCTA>LISTEN NOW</ListenNowCTA>
+        </TopHeroSection>
         <main>
           <h1 class="test">Candid & Cringe</h1>
           <p>
