@@ -1,0 +1,14 @@
+body {
+  font-family: "Sofia Pro";
+}
+
+.test {
+  font-family: "Ogg-Regular";
+}
+
+@font-face {
+  font-family: ‘Ogg-Regular’;
+  src: url(../fonts/Ogg-Regular.eot);
+  src: url(../fonts/Ogg-Regular.woff2) format(‘woff2’),
+    url(../fonts/Ogg-Regular.woff) format(‘woff’);
+}
