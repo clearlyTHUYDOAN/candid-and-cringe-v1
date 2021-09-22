@@ -19,6 +19,11 @@ const InnerContainer = styled.div`
 
 const Link = styled.a`
   color: black;
+  box-shadow: none;
+
+  &:hover {
+    color: #8c4d2e;
+  }
 `
 
 const Logo = styled.img`
@@ -32,7 +37,9 @@ class NavigationMenu extends React.Component {
         <InnerContainer>
           <Link href="/about/">ABOUT</Link>
           <Link href="/episodes/">EPISODES</Link>
-          <Logo src={logo} height="100" />
+          <Link href="/">
+            <Logo src={logo} height="100" />
+          </Link>
           <Link href="https://www.patreon.com/candidandcringe">PATREON</Link>
           <Link href="/subscribe/">SUBSCRIBE</Link>
         </InnerContainer>
