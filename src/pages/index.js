@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import SEO from "../components/seo"
+import NavigationMenu from "../components/navigationMenu"
 import "../components/styles.css"
 
 class IndexPage extends React.Component {
@@ -9,22 +9,7 @@ class IndexPage extends React.Component {
     return (
       <>
         <SEO title="Home" />
-        <nav>
-          <ul>
-            <li>
-              <Link to="/about/">About</Link>
-            </li>
-            <li>
-              <a href="/episodes/">Episodes</a>
-            </li>
-            <li>
-              <a href="https://www.patreon.com/candidandcringe">Patreon</a>
-            </li>
-            <li>
-              <a href="/subscribe/">Subscribe</a>
-            </li>
-          </ul>
-        </nav>
+        <NavigationMenu aria-label="Site navigation" />
         <header class="test">
           A podcast breaking barriers one candid conversation at a time
         </header>
