@@ -5,6 +5,8 @@ import SEO from "../components/seo"
 import NavigationMenu from "../components/navigationMenu"
 import "../components/styles.css"
 import hero from "../images/dark-hero-large.jpg"
+import multiEpisodePlayerBackground from "../images/multi-episode-player-background.jpg"
+import playerPlaceholder from "../images/player-placeholder.jpg"
 
 const TopHeroSection = styled.header`
   display: flex;
@@ -39,6 +41,29 @@ const ListenNowCTA = styled.a`
 }
 `
 
+const MultiEpisodePlayerSection = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+
+  background-image: url(${multiEpisodePlayerBackground});
+  background-size: cover;
+`
+
+const Header = styled.h1`
+  font-family: "Ogg-Regular";
+  font-size: 4.5em;
+`
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+
+  padding-right: 10em;
+`
+
 class IndexPage extends React.Component {
   render() {
     return (
@@ -55,13 +80,19 @@ class IndexPage extends React.Component {
           </ContentContainer>
           <ListenNowCTA>LISTEN NOW</ListenNowCTA>
         </TopHeroSection>
-        <main>
-          <h1 class="test">Candid & Cringe</h1>
-          <p>
-            a solo podcast with a conversational tone - a reflective, (sometimes
-            funny) story-telling and thought-provoking experience.
-          </p>
-        </main>
+        <MultiEpisodePlayerSection>
+          <TextContainer>
+            <Header>
+              Candid
+              <br />& Cringe
+            </Header>
+            a solo podcast with a <br />
+            conversational tone - a reflective, <br />
+            (sometimes funny) story-telling and <br />
+            thought-provoking experience.
+          </TextContainer>
+          <img src={playerPlaceholder} height={400} />
+        </MultiEpisodePlayerSection>
         <button>More Episodes</button>
         <section>
           <h2 class="test">
