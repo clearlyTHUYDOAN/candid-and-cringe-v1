@@ -4,18 +4,19 @@ import styled from "styled-components"
 import SEO from "../components/seo"
 import NavigationMenu from "../components/navigationMenu"
 import "../components/styles.css"
-import hero from "../images/dark-hero-large.jpg"
+import deepJadeLeafBackground from "../images/dark-hero-large.jpg"
 import multiEpisodePlayerBackground from "../images/multi-episode-player-background.jpg"
 import playerPlaceholder from "../images/player-placeholder.jpg"
+import sageLeafBackground from "../images/sage-leaf-background.jpg"
 
-const TopHeroSection = styled.header`
+const DeepJadeLeafBackground = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 500px;
 
-  background-image: url(${hero});
+  background-image: url(${deepJadeLeafBackground});
   background-size: cover;
 `
 
@@ -28,7 +29,7 @@ const ContentContainer = styled.div`
   color: white;
 `
 
-const ListenNowCTA = styled.a`
+const CTA = styled.a`
   padding: 2px 30px;
 
   color: white;
@@ -38,6 +39,10 @@ const ListenNowCTA = styled.a`
   font-size: 1.2em;
   text-align: center;
   border-radius: 9px;
+
+  &:hover {
+    background-color: #c3754d;
+  }
 }
 `
 
@@ -64,13 +69,44 @@ const TextContainer = styled.div`
   padding-right: 10em;
 `
 
+const SageLeafBackground = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-weight: 100;
+  color: white;
+
+  padding-bottom: 5%;
+
+  background-image: url(${sageLeafBackground});
+  background-size: cover;
+`
+
+const SubheadingContainer = styled.div`
+  width: 60%;
+`
+
+const Subheading = styled.h2`
+  font-family: "Ogg-Regular";
+  font-size: 3em;
+  font-weight: 100;
+`
+const SubtextContainer = styled.div`
+  padding-bottom: 2%;
+  width: 50%;
+  font-size: 1.2em;
+`
+
 class IndexPage extends React.Component {
   render() {
     return (
       <>
         <SEO title="Home" />
         <NavigationMenu aria-label="Site navigation" />
-        <TopHeroSection>
+        <DeepJadeLeafBackground>
           <ContentContainer>
             A podcast breaking barriers
             <br />
@@ -78,8 +114,8 @@ class IndexPage extends React.Component {
             <br />
             at a time
           </ContentContainer>
-          <ListenNowCTA>LISTEN NOW</ListenNowCTA>
-        </TopHeroSection>
+          <CTA href="/episodes/">LISTEN NOW</CTA>
+        </DeepJadeLeafBackground>
         <MultiEpisodePlayerSection>
           <TextContainer>
             <Header>
@@ -90,24 +126,34 @@ class IndexPage extends React.Component {
             conversational tone - a reflective, <br />
             (sometimes funny) story-telling and <br />
             thought-provoking experience.
+            <CTA href="/episodes/">More Episodes</CTA>
           </TextContainer>
-          <img src={playerPlaceholder} height={400} />
+          <img
+            src={playerPlaceholder}
+            alt="Sample multi-episode player"
+            height={400}
+          />
         </MultiEpisodePlayerSection>
-        <button>More Episodes</button>
-        <section>
-          <h2 class="test">
-            I’m a social media marketer turned developer looking to learn & grow
-            with my community
-          </h2>
-          <p>
-            Tune in to my bi-weekly podcast where I explore topics like mental
-            health, uplifting women of colour, women in tech, early career
-            developers, people pivoting in their careers, folks in the
+        <SageLeafBackground>
+          <SubheadingContainer>
+            <Subheading>
+              I’m a social media marketer
+              <br />
+              turned developer looking to learn
+              <br />& grow with my community
+            </Subheading>
+          </SubheadingContainer>
+          <SubtextContainer>
+            Tune in to my bi-weekly podcast where I explore topics like
+            <br />
+            mental health, uplifting women of colour, women in tech, early
+            <br />
+            career developers, people pivoting in their careers, folks in the
+            <br />
             accessibility & disability communities and so much more!
-          </p>
-          <button>About C&C</button>
-          <button>Play Trailer</button>
-        </section>
+          </SubtextContainer>
+          <CTA href="/about/">About C&C</CTA>
+        </SageLeafBackground>
         <section>
           <p>
             Click here to listen to Candid & Cringe now, for collaborations and
@@ -119,7 +165,7 @@ class IndexPage extends React.Component {
           <p>Subscribe to get new episodes directly to your mailbox</p>
           <form>
             <input type="email" aria-label="Email" />
-            <button>Submit</button>
+            <CTA>Submit</CTA>
           </form>
         </section>
         <footer>
