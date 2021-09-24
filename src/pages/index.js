@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import SEO from "../components/seo"
 import NavigationMenu from "../components/navigationMenu"
+import FooterNavigation from "../components/footerNavigation"
 import "../components/styles.css"
 import deepJadeLeafBackground from "../images/dark-hero-large.jpg"
 import multiEpisodePlayerBackground from "../images/multi-episode-player-background.jpg"
@@ -168,28 +169,7 @@ class IndexPage extends React.Component {
             <CTA>Submit</CTA>
           </form>
         </section>
-        <footer>
-          <ul>
-            <li>
-              <a
-                href="mailto:hi@candidandcringe.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Email
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/candidandcringe">Twitter</a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/candidandcringe/">Instagram</a>
-            </li>
-            <li>
-              <a href="https://www.patreon.com/candidandcringe">Patreon</a>
-            </li>
-          </ul>
-        </footer>
+        <FooterNavigation />
       </>
     )
   }
