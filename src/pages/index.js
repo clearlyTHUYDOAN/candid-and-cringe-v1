@@ -152,7 +152,7 @@ class IndexPage extends React.Component {
             <br />
             accessibility & disability communities and so much more!
           </SubtextContainer>
-          <CTA href="/about/">About C&C</CTA>
+          <CTA href="/about/">ABOUT C&C</CTA>
         </SageLeafBackground>
         <section>
           <p>
