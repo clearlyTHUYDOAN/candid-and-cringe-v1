@@ -22,7 +22,8 @@ const Link = styled.a`
   box-shadow: none;
 
   &:hover {
-    color: #8c4d2e;
+    color: #8c4e2f;
+    text-decoration: underline;
   }
 `
 

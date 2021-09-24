@@ -2,10 +2,6 @@ body {
   font-family: "Sofia Pro";
 }
 
-.test {
-  font-family: "Ogg-Regular";
-}
-
 @font-face {
   font-family: ‘Ogg-Regular’;
   src: url(../fonts/Ogg-Regular.eot);
