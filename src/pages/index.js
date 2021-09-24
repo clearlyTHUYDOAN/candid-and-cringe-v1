@@ -101,6 +101,32 @@ const SubtextContainer = styled.div`
   font-size: 1.2em;
 `
 
+const EmailSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  text-align: center;
+`
+
+const EmailCTAText = styled.p`
+  width: 40%;
+  margin: 0;
+  padding-bottom: 20px;
+
+  font-family: "Ogg-Regular";
+  font-size: 1.5em;
+  font-weight: 100;
+`
+
+const PodcastAvailabilityText = styled.sub`
+  font-size: 0.8em;
+  font-weight: 100;
+`
+
 class IndexPage extends React.Component {
   render() {
     return (
@@ -155,13 +181,15 @@ class IndexPage extends React.Component {
           </SubtextContainer>
           <CTA href="/about/">ABOUT C&C</CTA>
         </SageLeafBackground>
-        <section>
-          <p>
+        <EmailSection>
+          <EmailCTAText>
             Click here to listen to Candid & Cringe now, for collaborations and
             inquiries please email me at hi@candidandcringe.com
-          </p>
-          <sub>Also available on Spotify and Apple Podcasts</sub>
-        </section>
+          </EmailCTAText>
+          <PodcastAvailabilityText>
+            Also available on Spotify and Apple Podcasts
+          </PodcastAvailabilityText>
+        </EmailSection>
         <section>
           <p>Subscribe to get new episodes directly to your mailbox</p>
           <form>
